@@ -2,14 +2,14 @@
   <div class="header">
     <router-link to="/news">News</router-link> |
     <router-link to="/ask">Ask</router-link> |
-    <router-link to="/jobs">Jobs</router-link> |
-    <router-link to="/itemview">ItemView</router-link> |
-    <router-link to="/userview">UserView</router-link>
+    <router-link to="/jobs">Jobs</router-link>
+    <!-- <router-link to="/itemview">ItemView</router-link> |
+    <router-link to="/userview">UserView</router-link> -->
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>

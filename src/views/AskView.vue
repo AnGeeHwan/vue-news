@@ -1,26 +1,35 @@
 <template>
   <div>
-    <div v-for="item in ask" :key="item.id">
-      {{ item.title }}
-    </div>
+    <p v-for="item in fetchedAsk" :key="item.id">
+      <a v-bind:href="item.url">
+        {{ item.title }}
+      </a>
+      <small>{{ item.time_ago }} by {{ item.user }}</small>
+    </p>
   </div>
 </template>
 
 <script>
-import { fetchAskList } from '../api/index.js'
-
+import { mapGetters } from "vuex";
 export default {
-  data() {
-    return {
-      ask: [],
-    }
+  computed: {
+    // #3
+    ...mapGetters(["fetchedAsk"]),
+
+    // #2
+    // ...mapState({
+    //   ask: (state) => state.ask,
+    // }),
+
+    // #1
+    // ask() {
+    //   return this.$store.state.ask;
+    // },
   },
   created() {
-    fetchAskList()
-      .then((res) => (this.ask = res.data))
-      .catch((err) => console.log(err))
+    this.$store.dispatch("FETCH_ASK");
   },
-}
+};
 </script>
 
 <style></style>
