@@ -1,5 +1,7 @@
 # vue-news
 
+ - 다시 들으며 하는 정리
+
 - Hacker news Api
 - 뷰 라우터 구현
 - 컴포넌트 공통화 방법
@@ -33,3 +35,17 @@
    }
    ```
 
+### routes
+ - 해쉬 값 없애는 법 mode: 'history' 설정
+
+## API
+ 1. HTTP Request & Response 관련 기본 설정값 정의
+ 2. API 함수들 정리
+
+## this
+ - this는 기본적으로 전역을 가리킴
+ - 생성자 함수안의 this 의 경우 생성자 함수를 가리킴
+
+## 비동기처리
+### Callback
+ - 함수거나 기능이 종료될 때 실행되는 함수
